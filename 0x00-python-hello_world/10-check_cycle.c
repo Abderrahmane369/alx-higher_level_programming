@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * check_cycle - check if 
+ * check_cycle - check if
  * @list: the list
  * Return: Int
  */
