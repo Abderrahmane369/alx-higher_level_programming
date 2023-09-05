@@ -6,12 +6,11 @@
  * Return: Int
 */
 
-int check_cycle(listint_t *list)
-{
+int check_cycle(listint_t *list) {
     listint_t *h = list;
 
     if (!list) return (0);
-    
+
     h = h->next;
 
     while (h) {
@@ -20,5 +19,5 @@ int check_cycle(listint_t *list)
         h = h->next;
     }
 
-    return (0);
+    return 0;
 }
