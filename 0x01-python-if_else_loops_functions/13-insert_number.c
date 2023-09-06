@@ -26,21 +26,11 @@ listint_t *insert_node(listint_t **head, int number)
 
 	_newNode->n = number, _newNode->next = _current;
 
-<<<<<<< HEAD
     if (*head != _current && *head)
         _previous->next = _newNode;
-=======
-	if (*head)
-		_previous->next = _newNode;
->>>>>>> fd42159bdc21bdc9b4e3059f60161c9302b34a17
 
 	if (_current == *head)
 		*head = _newNode;
 
-<<<<<<< HEAD
-     return (_newNode);
-}
-=======
 	return (_newNode);
 }
->>>>>>> fd42159bdc21bdc9b4e3059f60161c9302b34a17
