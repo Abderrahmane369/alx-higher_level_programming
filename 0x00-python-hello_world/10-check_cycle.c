@@ -8,23 +8,24 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *h = list;
-    listint_t *_PURE_ = NULL, *_Phead_;
+        listint_t *h = list;
+        listLIS *lIs = NULL, *head_lIs;
 
-    while (h)
-    {
-        
-        while (_PURE_)
+        while (h)
         {
-            if (h == _PURE_) 
-                return (1);
-            
-            _PURE_ = _PURE_->next;
+                while (lIs)
+                {
+                        if (h == lIs->node)
+                                return (1);
+
+                        lIs = lIs->next;
+                }
+                add_nodeLIS(&head_lIs, h);
+
+                lIs = head_lIs;
+
+                h = h->next;
         }
 
-        h = h->next;
-    }
-
-	return (0); 
+        return (0);
 }
- 
