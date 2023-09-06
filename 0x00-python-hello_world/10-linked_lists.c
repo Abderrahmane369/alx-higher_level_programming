@@ -45,6 +45,21 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	return (new);
 }
 
+listLIS *add_nodeLIS(listLIS **head, listint_t *node)
+{
+	listLIS *new;
+
+	new = malloc(sizeof(listLIS));
+	if (new == NULL)
+		return (NULL);
+
+	new->node = node;
+	new->next = *head;
+	*head = new;
+
+	return (new);
+}
+
 /**
  * free_listint - frees a listint_t list
  * @head: pointer to list to be freed
@@ -53,6 +68,18 @@ listint_t *add_nodeint(listint_t **head, const int n)
 void free_listint(listint_t *head)
 {
 	listint_t *current;
+
+	while (head != NULL)
+	{
+		current = head;
+		head = head->next;
+		free(current);
+	}
+}
+
+void free_listLIS(listLIS *head)
+{
+	listLIS *current;
 
 	while (head != NULL)
 	{
