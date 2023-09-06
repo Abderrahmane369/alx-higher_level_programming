@@ -9,24 +9,24 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *h = list;
-    listLIS *lIs = NULL, *head_lIs;
+	listLIS *lIs = NULL, *head_lIs;
 
-    while (h)
-    {
-        while (lIs)
-        {
-            if (h == lIs->node) 
-                return (1);
-            
-            lIs = lIs->next;
-        }
-        add_nodeLIS(&head_lIs, h);
+	while (h)
+	{
+		while (lIs)
+		{
+			if (h == lIs->node)
+				return (1);
 
-        lIs = head_lIs;
+			lIs = lIs->next;
+		}
+		add_nodeLIS(&head_lIs, h);
 
-        h = h->next;
-    }
+		lIs = head_lIs;
 
-	return (0); 
+		h = h->next;
+	}
+
+	return (0);
 }
- 
+
