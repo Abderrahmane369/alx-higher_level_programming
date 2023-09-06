@@ -6,16 +6,16 @@
  * @head: the head
  * @number: n
  * Return: The
-*/
+ */
 
 listint_t *insert_node(listint_t **head, int number)
 {
     listint_t *_current = *head, *_previous, *_newNode;
-  
+
     while (_current)
     {
         if (number > _current->n)
-             _previous = _current, _current = _current->next;
+            _previous = _current, _current = _current->next;
         else
             break;
     }
@@ -31,6 +31,6 @@ listint_t *insert_node(listint_t **head, int number)
 
     if (_current == *head)
         *head = _newNode;
-    
+
     return (_newNode);
 }
