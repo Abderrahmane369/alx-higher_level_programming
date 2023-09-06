@@ -27,6 +27,7 @@ int check_cycle(listint_t *list)
 		h = h->next;
 	}
 
+    free_listLIS(lIs);
 	return (0);
 }
 
