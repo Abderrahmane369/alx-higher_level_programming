@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def main():
-    from hidden_4 import *
+    import hidden_4
     
     for _ in dir():
         if '__' in _:
