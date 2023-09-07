@@ -4,7 +4,7 @@ def main():
     import hidden_4
 
     for _ in dir():
-        if '__' not in _:
+        if not ('__' in _):
             print("{}".format(_))
 
 
