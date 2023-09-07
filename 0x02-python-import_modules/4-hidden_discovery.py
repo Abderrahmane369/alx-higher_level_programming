@@ -3,8 +3,7 @@
 def main():
     import hidden_4
 
-    for _ in dir():
-            print("{}".format(_))
+            print(dir())
 
 
 if __name__ == '__main__':
