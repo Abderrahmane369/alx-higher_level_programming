@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-import "101-easy_print"
+import string
+print("{}".format(string.ascii_uppercase))
