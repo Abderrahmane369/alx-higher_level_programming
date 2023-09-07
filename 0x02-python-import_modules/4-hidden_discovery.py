@@ -2,8 +2,8 @@
 
 def main():
     import hidden_4
-
-            print(dir())
+    
+    print(dir())
 
 
 if __name__ == '__main__':
