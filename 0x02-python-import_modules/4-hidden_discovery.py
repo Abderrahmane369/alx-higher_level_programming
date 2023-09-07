@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def main():
-    import hidden_4
+    import meow
     
     print(dir())
 
