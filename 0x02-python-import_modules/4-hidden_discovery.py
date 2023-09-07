@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-from meow import *
 
 def main():
-    
-    print(dir())
+    import hidden_4
+
+    for _ in dir(hidden_4):
+        if '__' not in _:
+            print("{}".format(_))
 
 
 if __name__ == '__main__':
