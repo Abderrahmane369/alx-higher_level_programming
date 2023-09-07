@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def main():
-    import meow
+    from meow import *
     
     print(dir())
 
