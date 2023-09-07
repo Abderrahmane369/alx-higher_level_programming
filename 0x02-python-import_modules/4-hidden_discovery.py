@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-my_list = [1, 2, 3]
 
-# List attributes and methods of the list object
-list_attributes = dir(my_list)
+def main():
+    from hidden_4 import *
+    
+    for _ in dir():
+        if '__' in _:
+            print("{}".format(_))
+    
 
-# Print the list attributes
-print(list_attributes)
+if __name__ == '__main__':
+    main()
