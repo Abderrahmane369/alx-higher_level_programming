@@ -8,12 +8,13 @@ def main():
         "argument" if len(argv) == 2 else "arguments",
         ":" if len(argv) - 1 else "."
         ))
-    
+
     for _, arg in enumerate(argv[1:], start=1):
         print("{}: {}".format(
             _,
             arg
         ))
-    
+
+
 if __name__ == '__main__':
     main()
