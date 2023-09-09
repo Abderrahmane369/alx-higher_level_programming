@@ -6,5 +6,5 @@ def print_matrix_integer(matrix=[[]]):
         return
 
     for _ in matrix:
-        [print("{:d}".format(__), 
+        [print("{:d}".format(__),
                end=" " if __ != _[-1] else "\n") for __ in _]
