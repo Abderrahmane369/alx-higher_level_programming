@@ -2,4 +2,4 @@
 
 def print_matrix_integer(matrix=[[]]):
     for _ in matrix:
-        [print("{:d}".format(__), end=" " if __ != len(_) - 1 else "\n") for __ in _]
+        [print("{:d}".format(__), end=" " if __ != _[-1] else "\n") for __ in _]
