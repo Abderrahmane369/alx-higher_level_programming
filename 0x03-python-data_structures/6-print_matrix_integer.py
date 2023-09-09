@@ -1,3 +1,6 @@
 #!/usr/bin/python3
-print(5, end="")
-print(6, end="")
+
+def print_matrix_integer(matrix=[[]]):
+    for _ in matrix:
+        [print("{:d}".format(__), end=" ") for __ in _]
+        print("{}".format("\n"))
