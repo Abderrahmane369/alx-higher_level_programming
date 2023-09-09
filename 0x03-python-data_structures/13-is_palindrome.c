@@ -44,7 +44,7 @@ int is_palindrome(listint_t **head)
 
 	for (_ = 0; _hlen / 2 >= _; _++)
 	{
-		if (node(_h, _hlen - 1 - _)->n != node(_h, _))
+		if (node(_h, _hlen - 1 - _)->n != node(_h, _)->n)
 			return (0);
 	}
 
