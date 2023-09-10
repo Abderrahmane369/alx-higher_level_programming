@@ -37,6 +37,9 @@ int is_palindrome(listint_t **head)
 	size_t _hlen = 0;
 	size_t _;
 
+	if (!*head)
+		return (1);
+
 	while (_h)
 		_hlen++, _h = _h->next;
 
