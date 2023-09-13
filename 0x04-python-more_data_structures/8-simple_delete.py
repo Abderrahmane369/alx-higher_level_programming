@@ -2,6 +2,6 @@
 
 def simple_delete(a_dictionary, key=""):
     dict = a_dictionary
-    del dict[key]
+    dict.pop(key, None)
 
     return dict
