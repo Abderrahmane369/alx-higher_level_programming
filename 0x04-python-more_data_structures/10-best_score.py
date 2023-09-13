@@ -1,4 +1,7 @@
 #!/usr/bin/python3
 
 def best_score(a_dictionary):
-    return max(a_dictionary, key=lambda _: a_dictionary[_]) if a_dictionary != {} else None
+    if a_dictionary is None or a_dictionary == {}:
+        return None
+
+    return max(a_dictionary, key=lambda _: a_dictionary[_])
