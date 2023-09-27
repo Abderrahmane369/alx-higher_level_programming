@@ -41,6 +41,9 @@ class Square():
         if type(pos) is not tuple:
             raise TypeError("position must be a tuple")
 
+        if type(pos[0]) is not int or type(pos[1]) is not int:
+            raise TypeError("position must be a tuple")
+
         self.__position = pos
 
     def area(self):
