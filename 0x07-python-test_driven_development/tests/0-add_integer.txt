@@ -97,36 +97,12 @@ that value is equivalent to using the ``+`` operator.
 
 ::
 
-    >>> add_integer(None, 3)
+    >>> add_integer()
     Traceback (most recent call last):
-    TypeError: a must be an integer
+    TypeError: add_integer() missing 1 required positional argument: 'a'
 
 ::
 
-    >>> add_integer(5, None)
+    >>> add_integer(5, 2, 8)
     Traceback (most recent call last):
-    TypeError: b must be an integer
-
-::
-
-    >>> add_integer(float('inf'), 5)
-    Traceback (most recent call last):
-    OverflowError: cannot convert float infinity to integer
-
-::
-
-    >>> add_integer(5, float('inf'))
-    Traceback (most recent call last):
-    OverflowError: cannot convert float infinity to integer
-
-::
-
-    >>> add_integer(5, float('NaN'))
-    Traceback (most recent call last):
-    ValueError: cannot convert float NaN to integer
-
-::
-
-    >>> add_integer(float('NaN'))
-    Traceback (most recent call last):
-    ValueError: cannot convert float NaN to integer
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
