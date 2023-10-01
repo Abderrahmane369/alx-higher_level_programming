@@ -7,7 +7,7 @@ def matrix_divided(matrix, div):
     f = frozenset
     m = matrix
 
-    if type(matrix) is not list:
+    if type(matrix) is not list or matrix == []:
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats"
             )
@@ -17,11 +17,12 @@ def matrix_divided(matrix, div):
             raise TypeError(
                 "matrix must be a matrix (list of lists) of integers/floats"
                 )
-
-    if {f({1 if type(_) is int else 0 for _ in r}) for r in m} != {f({1})}:
-        raise TypeError(
-            "matrix must be a matrix (list of lists) of integers/floats"
-            )
+        
+        for __ in _:
+            if type(__) not in {int, float}:
+                raise TypeError(
+                    "matrix must be a matrix (list of lists) of integers/floats"
+                    )
 
     if len({len(r) for r in matrix}) != 1:
         raise TypeError("Each row of the matrix must have the same size")
