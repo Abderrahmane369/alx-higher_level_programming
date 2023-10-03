@@ -67,5 +67,5 @@ class Rectangle():
 
         return ("#" * self.width + "\n") * (self.height - 1) + "#" * self.width
 
-    def __delattr__(self, __name: str) -> None:
+    def __del__(self):
         print("Bye rectangle...")
