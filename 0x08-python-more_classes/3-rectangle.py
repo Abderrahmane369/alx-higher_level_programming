@@ -62,4 +62,4 @@ class Rectangle():
         if not self.width * self.height:
             return ""
 
-        return ("#" * self.width + "\n") * self.height
+        return ("#" * self.width + "\n") * (self.height - 1) + "#" * self.width
