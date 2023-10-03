@@ -70,7 +70,10 @@ class Rectangle():
         if not self.width * self.height:
             return ""
 
-        return (str(self.print_symbol) * self.width + "\n") * (self.height - 1) + str(self.print_symbol) * self.width
+        rect = (str(self.print_symbol) * self.width + "\n") * (self.height - 1)
+        rect += str(self.print_symbol) * self.width
+
+        return rect
 
     def __del__(self):
         print("Bye rectangle...")
