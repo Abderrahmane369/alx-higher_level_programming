@@ -100,3 +100,4 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_likj(self):
         self.assertRaises(TypeError, max_integer, {1, 2, 3, 4})
+
