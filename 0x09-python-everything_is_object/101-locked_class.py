@@ -9,4 +9,4 @@ class LockedClass():
             super().__setattr__(__name, __value)
 
         else:
-            raise AttributeError
+            raise AttributeError("'LockedClass' object has no attribute 'last_name'")
