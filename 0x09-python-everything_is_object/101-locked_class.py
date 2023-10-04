@@ -9,4 +9,6 @@ class LockedClass():
             super().__setattr__(__name, __value)
 
         else:
-            raise AttributeError("'LockedClass' object has no attribute '{}'".format(__name))
+            raise AttributeError(
+                "'LockedClass' object has no attribute '{}'".format(__name)
+                )
