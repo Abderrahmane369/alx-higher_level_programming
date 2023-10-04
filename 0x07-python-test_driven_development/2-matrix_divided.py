@@ -17,11 +17,12 @@ def matrix_divided(matrix, div):
             raise TypeError(
                 "matrix must be a matrix (list of lists) of integers/floats"
                 )
-        
+
         for __ in _:
             if type(__) not in {int, float}:
                 raise TypeError(
-                    "matrix must be a matrix (list of lists) of integers/floats"
+                    "matrix must be a matrix" +
+                    "(list of lists) of integers/floats"
                     )
 
     if len({len(r) for r in matrix}) != 1:
