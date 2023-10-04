@@ -4,6 +4,7 @@
 
 def text_indentation(text):
     """lazeaeifdçifklooloo"""
+
     i = 0
 
     if type(text) != str:
