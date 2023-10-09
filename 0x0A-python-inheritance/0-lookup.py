@@ -3,6 +3,5 @@
 
 
 def lookup(obj):
-     """return lg
-     ist of available attributes"""
-	return dir(obj)
+     """return lgist of available attributes"""
+     return dir(obj)
