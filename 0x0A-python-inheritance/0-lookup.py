@@ -4,13 +4,13 @@
 
 def lookup(obj):
      """
-  return list of available attributes
+     return list of available attributes
 
-  Parameters:
-  -obj: object
-  BLA BLA BLA
+     Parameters:
+       -obj: object
+     BLA BLA BLA
 
-  Returns:
-  -list: of bla bla blaaaa
-  """
+     Returns:
+      -list: of bla bla blaaaa
+      """
      return dir(obj)
