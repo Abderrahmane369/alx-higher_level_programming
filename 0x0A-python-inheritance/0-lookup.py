@@ -5,4 +5,3 @@
 def lookup(obj):
   """lzaeasddsqxc"""
   return dir(obj)
-
