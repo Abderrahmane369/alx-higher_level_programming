@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""mewazeazeazeazeo"""
+"""Module documentation"""
 
 
 def lookup(obj):
-  """lzaeasddsqxc"""
+  """return list of available attributes"""
   return dir(obj)
