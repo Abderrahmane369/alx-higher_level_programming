@@ -8,10 +8,9 @@ def lookup(obj):
 
      Parameters:
        -obj: object
-     BLA BLA BLA
 
      Returns:
-      -list: of bla bla blaaaa
+      -list: list of attributes
       """
 
      return dir(obj)
