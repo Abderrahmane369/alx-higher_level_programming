@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""mewo"""
+"""mewazeazeazeazeo"""
 
 
 def lookup(obj):
