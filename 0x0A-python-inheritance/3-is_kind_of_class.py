@@ -4,4 +4,4 @@
 
 def is_kind_of_class(obj, a_class):
     """zaeazeaze"""
-    return isinstance(ob, a_class)
+    return isinstance(obj, a_class)
