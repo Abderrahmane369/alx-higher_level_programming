@@ -119,3 +119,9 @@ Numbers
     Traceback (most recent call last):
     TypeError:  must be an integer
 
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg1.area()
+    Traceback (most recent call last):
+    NameError: name 'bg1' is not defined
