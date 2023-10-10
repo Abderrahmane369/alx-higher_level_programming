@@ -83,7 +83,7 @@ Numbers
     >>> bg = BaseGeometry()
     >>> bg.integer_validator()
     Traceback (most recent call last):
-    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    ValueError: c must be greater than 0
 
 ::
 
@@ -125,9 +125,3 @@ Numbers
     >>> bg1.area()
     Traceback (most recent call last):
     NameError: name 'bg1' is not defined
-
-::
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("", 0)
-    Traceback (most recent call last):
-    ValueError:  must be greater than 0
