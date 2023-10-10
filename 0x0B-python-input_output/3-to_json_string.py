@@ -3,6 +3,6 @@
 import json
 
 
-def to_json_string(my_obj):
-     """converts to json string"""
-     return json.dumps(my_obj)
+def from_json_string(my_str):
+     """converts json string to python object"""
+     return json.loads(my_str)
