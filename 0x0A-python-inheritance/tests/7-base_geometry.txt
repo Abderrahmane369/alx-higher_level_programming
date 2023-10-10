@@ -53,4 +53,24 @@ Numbers
     >>> bg.integer_validator("f", [2])
     Traceback (most recent call last):
     TypeError: f must be an integer
-    
+
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("g")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("i", 5, 32)
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
