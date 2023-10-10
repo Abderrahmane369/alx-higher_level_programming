@@ -122,6 +122,6 @@ Numbers
 ::
 
     >>> bg = BaseGeometry()
-    >>> bg.area()
+    >>> bg1.area()
     Traceback (most recent call last):
-    Exception: area() is not implemented
+    NameError: name 'bg1' is not defined
