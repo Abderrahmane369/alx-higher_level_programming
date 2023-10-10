@@ -73,3 +73,9 @@ Numbers
     >>> l = [0, 0, 0, 0, 0]
     >>> MyList(l).print_sorted()
     [0, 0, 0, 0, 0]
+
+::
+
+    >>> l = [-5]
+    >>> MyList(l).print_sorted()
+    [-5]
