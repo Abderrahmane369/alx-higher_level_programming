@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"""welcome and woelc"""
+"""module"""
 
 
 def read_file(filename=""):
-    """lsddqds"""
+    """reads files"""
     with open(filename, encoding="utf-8") as f:
         print(f.read())
+
+         return f.read()
