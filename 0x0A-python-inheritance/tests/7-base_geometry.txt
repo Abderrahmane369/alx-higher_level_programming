@@ -29,6 +29,23 @@ Numbers
 ::
 
     >>> bg = BaseGeometry()
+    >>> bg.integer_validator("bb", -1)
+    Traceback (most recent call last):
+    ValueError: bb must be greater than 0
+
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("bbb", 1)
+
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("bbbb", 111)
+    
+::
+
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("c", -12)
     Traceback (most recent call last):
     ValueError: c must be greater than 0
@@ -74,3 +91,30 @@ Numbers
     >>> bg.integer_validator("i", 5, 32)
     Traceback (most recent call last):
     TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("dd", "12")
+    Traceback (most recent call last):
+    TypeError: dd must be an integer
+
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("d", "12")
+    Traceback (most recent call last):
+    TypeError: d must be an integer
+
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("", 12)
+
+
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("", "12")
+    Traceback (most recent call last):
+    TypeError:  must be an integer
