@@ -1,0 +1,56 @@
+===============================
+ How to Use doctest_in_help.py
+===============================
+
+This library is very simple, since it only has one function called
+``matrix_divided()``.
+
+Numbers
+=======
+
+``print_sorted()`` returns the product of its arguments.  For numbers,
+
+::
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("a", 5)
+    
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("b", 0)
+    Traceback (most recent call last):
+    ValueError: <name> must be greater than 0
+
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("c", -12)
+    Traceback (most recent call last):
+    ValueError: <name> must be greater than 0
+
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("d", "aaa")
+    Traceback (most recent call last):
+    TypeError: <name> must be an integer
+
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("e", None)
+    Traceback (most recent call last):
+    TypeError: <name> must be an integer
+
+::
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("d", [2])
+    Traceback (most recent call last):
+    TypeError: <name> must be an integer
+    
