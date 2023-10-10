@@ -3,6 +3,6 @@
 
 
 def read_file(filename=""):
-     """lsddqds"""
+    """lsddqds"""
     with open(filename, "r") as f:
         print(f.read())
