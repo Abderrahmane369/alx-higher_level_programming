@@ -1,0 +1,63 @@
+===============================
+ How to Use doctest_in_help.py
+===============================
+
+This library is very simple, since it only has one function called
+``matrix_divided()``.
+
+Numbers
+=======
+
+``print_sorted()`` returns the product of its arguments.  For numbers,
+
+::
+
+    >>> MyList = __import__('1-my_list').MyList
+
+::
+
+    >>> l = [1, 5, 2, 4, 3]
+    >>> MyList(l).print_sorted()
+    [1, 2, 3, 4, 5]
+
+::
+
+    >>> l = [1, 2, 3, 4, 5]
+    >>> MyList(l).print_sorted()
+    [1, 2, 3, 4, 5]
+
+::
+
+    >>> l = [1, 1, 1, 1 , 1]
+    >>> MyList(l).print_sorted()
+    [1, 1, 1, 1, 1]
+
+::
+
+    >>> l = [5]
+    >>> MyList(l).print_sorted()
+    [5]
+
+::
+
+    >>> l = [-1, 2, -3, -4, 5]
+    >>> MyList(l).print_sorted()
+    [-4, -3, -1, 2, 5]
+
+::
+
+    >>> l = []
+    >>> MyList(l).print_sorted()
+    []
+
+::
+
+    >>> l = [11, -1, 0, 122 , -51]
+    >>> MyList(l).print_sorted()
+    [-51, -1, 0, 11, 122]
+
+::
+
+    >>> l = [-11, -1, -10, -122 , -51]
+    >>> MyList(l).print_sorted()
+    [-122, -51, -11, -10, -1]
