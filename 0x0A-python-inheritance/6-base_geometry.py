@@ -3,6 +3,6 @@
 
 
 class BaseGeometry():
-     """azeazeaea"""
-     def area(self):
-          raise Exception("area() is not implemented")
+    """azeazeaea"""
+    def area(self):
+        raise Exception("area() is not implemented")
