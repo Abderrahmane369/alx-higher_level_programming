@@ -4,5 +4,5 @@
 
 def read_file(filename=""):
     """lsddqds"""
-    with open(filename, encoding="utf-8") as f:  for line in f:
+    with open(filename, encoding="utf-8") as f:
         print(f.read())
