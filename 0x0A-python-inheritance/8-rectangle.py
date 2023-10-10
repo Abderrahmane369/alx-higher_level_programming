@@ -5,12 +5,12 @@
 class BaseGeometry():
     """azeazeaea"""
     def __init__(self, width, height):
-         self.width = width;
-         self.height = height;
+        self.width = width
+        self.height = height
 
-         BaseGeometry.integer_validator(self, "width", self.width)
-         BaseGeometry.integer_validator(self, "height", self.height)
-         
+        BaseGeometry.integer_validator(self, "width", self.width)
+        BaseGeometry.integer_validator(self, "height", self.height)
+
     def area(self):
         raise Exception("area() is not implemented")
 
