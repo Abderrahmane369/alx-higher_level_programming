@@ -24,33 +24,33 @@ Numbers
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("b", 0)
     Traceback (most recent call last):
-    ValueError: <name> must be greater than 0
+    ValueError: b must be greater than 0
 
 ::
 
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("c", -12)
     Traceback (most recent call last):
-    ValueError: <name> must be greater than 0
+    ValueError: c must be greater than 0
 
 ::
 
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("d", "aaa")
     Traceback (most recent call last):
-    TypeError: <name> must be an integer
+    TypeError: d must be an integer
 
 ::
 
     >>> bg = BaseGeometry()
     >>> bg.integer_validator("e", None)
     Traceback (most recent call last):
-    TypeError: <name> must be an integer
+    TypeError: e must be an integer
 
 ::
 
     >>> bg = BaseGeometry()
-    >>> bg.integer_validator("d", [2])
+    >>> bg.integer_validator("f", [2])
     Traceback (most recent call last):
-    TypeError: <name> must be an integer
+    TypeError: f must be an integer
     
