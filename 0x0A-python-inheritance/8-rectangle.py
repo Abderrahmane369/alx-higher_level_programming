@@ -18,8 +18,8 @@ class BaseGeometry():
 class Rectangle(BaseGeometry):
     """azeazeaea"""
     def __init__(self, width, height):
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
-        BaseGeometry.integer_validator(self, "width", self.width)
-        BaseGeometry.integer_validator(self, "height", self.height)
+        BaseGeometry.integer_validator(self, "width", self.__width)
+        BaseGeometry.integer_validator(self, "height", self.__height)
