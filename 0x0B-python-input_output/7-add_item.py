@@ -7,7 +7,7 @@ saveJSON = __import__('5-save_to_json_file').save_to_json_file
 
 try:
      loaded = loadJSON('add_item.json')
-except json.decoder.JSONDecodeError:
+except Exception:
      loaded = []
 
 loaded += sys.argv[1:]
