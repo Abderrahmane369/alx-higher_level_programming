@@ -10,6 +10,6 @@ try:
 except json.decoder.JSONDecodeError:
      loaded = []
 
-loaded += [sys.argv[1:]]
+loaded += sys.argv[1:]
 
 saveJSON(loaded, 'add_item.json')
