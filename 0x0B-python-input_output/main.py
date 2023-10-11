@@ -1,29 +1,13 @@
 #!/usr/bin/python3
-to_json_string = __import__('3-to_json_string').to_json_string
+Student = __import__('10-student').Student
 
-my_list = [1, 2, 3]
-s_my_list = to_json_string(my_list)
-print(s_my_list)
-print(type(s_my_list))
+student_1 = Student("John", "Doe", 23)
+student_2 = Student("Bob", "Dylan", 27)
 
-my_dict = { 
-    'id': 12,
-    'name': "John",
-    'places': [ "San Francisco", "Tokyo" ],
-    'is_active': True,
-    'info': {
-        'age': 36,
-        'average': 3.14
-    }
-}
-s_my_dict = to_json_string(my_dict)
-print(s_my_dict)
-print(type(s_my_dict))
+j_student_1 = student_1.to_json()
+j_student_2 = student_2.to_json(['first_name', 'age'])
+j_student_3 = student_2.to_json(['middle_name', 'age'])
 
-try:
-    my_set = { 132, 3 }
-    s_my_set = to_json_string(my_set)
-    print(s_my_set)
-    print(type(s_my_set))
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+print(j_student_1)
+print(j_student_2)
+print(j_student_3)

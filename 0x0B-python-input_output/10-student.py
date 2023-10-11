@@ -11,6 +11,6 @@ class Student():
 
     def to_json(self, attrs=None):
          if type(attrs) is list:
-              return {_: v for _, v self.__dict__.items() if _ in attrs}
-
-          return sefl.__dict__
+              return {_: v for _, v in self.__dict__.items() if _ in attrs}
+              
+         return self.__dict__
