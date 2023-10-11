@@ -12,4 +12,4 @@ except json.decoder.JSONDecodeError:
 
 loaded += [sys.argv[1:]]
 
-saveJSON(l, 'add_item.json')
+saveJSON(loaded, 'add_item.json')
