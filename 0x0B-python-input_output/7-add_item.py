@@ -6,9 +6,9 @@ loadJSON = __import__('6-load_from_json_file').load_from_json_file
 saveJSON = __import__('5-save_to_json_file').save_to_json_file
 
 try:
-     loaded = loadJSON('add_item.json')
+    loaded = loadJSON('add_item.json')
 except Exception:
-     loaded = []
+    loaded = []
 
 loaded += sys.argv[1:]
 
