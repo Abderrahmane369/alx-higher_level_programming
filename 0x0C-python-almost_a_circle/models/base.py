@@ -7,6 +7,7 @@ class Base():
     __nb_objects = 0
 
     def __init__(self, id=None) -> None:
+        """Base class"""
         if id is not None:
             self.id = id
         else:
@@ -15,6 +16,7 @@ class Base():
     
     @staticmethod
     def to_json_string(list_dictionaries):
+        """Base class"""
         if list_dictionaries is None:
             return "[]"
 
@@ -22,6 +24,7 @@ class Base():
 
     @staticmethod
     def from_json_string(json_string):
+        """Base class"""
         if json_string in {None, ""}:
             return []
 
@@ -29,6 +32,7 @@ class Base():
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """Base class"""
         with open('{}.json'.format(cls.__name__), 'w') as f:
             objs = []
             if list_objs is not None:
@@ -41,6 +45,7 @@ class Base():
     
     @classmethod
     def create(cls, **dictionary):
+        """Base class"""
         dummy = cls(1, 2, 3, 4)
         dummy.update(**dictionary)
 
