@@ -19,13 +19,11 @@ class Base():
     def to_json_string(list_dictionaries):
         """toJSON_String
 
-
         Args:
             list_dictionaries: lists of dictionaries
         """
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
-
         return json.dumps(list_dictionaries)
 
     @staticmethod
@@ -33,7 +31,6 @@ class Base():
         """to_json_string method"""
         if json_string in {None, ""}:
             return []
-
         return json.loads(json_string)
 
     @classmethod
