@@ -19,8 +19,9 @@ class Base():
     def to_json_string(list_dictionaries):
         """toJSON_String
 
+
         Args:
-            list_dictionaries: listsssss
+            list_dictionaries: lists of dictionaries
         """
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
