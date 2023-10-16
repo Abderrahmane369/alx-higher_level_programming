@@ -2,6 +2,7 @@
 """JSON"""
 import json
 
+
 class Base():
     """Base class"""
     __nb_objects = 0
@@ -13,7 +14,7 @@ class Base():
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """Base class"""
@@ -37,12 +38,13 @@ class Base():
             objs = []
             if list_objs is not None:
                 objs = list_objs
-            
+
             if cls == Base:
                 f.write(cls.to_json_string([vars(obj) for obj in objs]))
             else:
-                f.write(cls.to_json_string([obj.to_dictionary() for obj in objs]))
-    
+                f.write(cls.to_json_string(
+                    [obj.to_dictionary() for obj in objs]))
+
     @classmethod
     def create(cls, **dictionary):
         """Base class"""
@@ -50,4 +52,3 @@ class Base():
         dummy.update(**dictionary)
 
         return dummy
-

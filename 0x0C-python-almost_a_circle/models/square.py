@@ -10,10 +10,12 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """azeazeaeazea"""
         return self.width
     
     @size.setter
     def size(self, _):
+        """azeazeaeazea"""
         self.width = _
         self.height = _
 
@@ -21,6 +23,7 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
     
     def update(self, *args, **kwargs):
+        """azeazeaeazea"""
         if len(args) > 0:
             for _, arg in enumerate(args):
                 if _ == 0:
@@ -44,6 +47,7 @@ class Square(Rectangle):
                         self.id = _
 
     def to_dictionary(self):
+        """azeazeaeazea"""
         return {
             'x': self.x,
             'y': self.y,
@@ -52,4 +56,5 @@ class Square(Rectangle):
         }
 
     def __str__(self):
+        """azeazeaeazea"""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
