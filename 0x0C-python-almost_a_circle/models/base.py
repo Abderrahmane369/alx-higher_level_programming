@@ -7,7 +7,7 @@ class Base():
     """Base class (blueprint) for objrcts.
     private class attribute: __nb_objects = 0.
     """
-    
+
     __nb_objects = 0
 
     def __init__(self, id=None) -> None:
