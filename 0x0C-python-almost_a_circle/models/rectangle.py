@@ -7,6 +7,7 @@ class Rectangle(Base):
     """Rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Rectangle class"""
         self.__width = width
         self.__height = height
         self.__x = x
@@ -40,10 +41,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """Rectangle class"""
         return self.__width
 
     @width.setter
     def width(self, w):
+        """Rectangle class"""
         if type(w) is not int:
             raise TypeError("width must be an integer")
 
@@ -54,10 +57,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Rectangle class"""
         return self.__height
 
     @height.setter
     def height(self, h):
+        """Rectangle class"""
         if type(h) is not int:
             raise TypeError("width must be an integer")
 
@@ -68,10 +73,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Rectangle class"""
         return self.__x
 
     @x.setter
     def x(self, _x):
+        """Rectangle class"""
         if type(_x) is not int:
             raise TypeError("width must be an integer")
 
@@ -82,10 +89,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Rectangle class"""
         return self.__y
 
     @y.setter
     def y(self, _y):
+        """Rectangle class"""
         if type(_y) is not int:
             raise TypeError("width must be an integer")
 
@@ -95,13 +104,16 @@ class Rectangle(Base):
         self.__y = _y
 
     def area(self):
+        """Rectangle class"""
         return self.width * self.height
 
     def display(self):
+        """Rectangle class"""
         print("\n" * self.y + (" " * self.x + "#" *
               self.width + "\n") * self.height, end="")
 
     def to_dictionary(self):
+        """Rectangle class"""
         return {
             'x': self.x,
             'y': self.y,
@@ -111,11 +123,13 @@ class Rectangle(Base):
         }
 
     def __str__(self):
+        """Rectangle class"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x,
             self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
+        """Rectangle class"""
         if len(args) > 0:
             for _, arg in enumerate(args):
                 if _ == 0:
