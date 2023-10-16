@@ -18,7 +18,7 @@ class Base():
     @staticmethod
     def to_json_string(list_dictionaries):
         """toJSON_String
-        
+
         Args:
             list_dictionaries: listsssss
         """
