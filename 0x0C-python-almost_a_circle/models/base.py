@@ -16,6 +16,17 @@ class Base():
             self.id = Base.__nb_objects
 
     @staticmethod
+    def to_json_string(list_dictionaries):
+        """returns the JSON string representation of list_dictionaries.
+
+        Args:
+            list_dictionaries: list of dictionaries.
+        """
+        if list_dictionaries is None or list_dictionaries == []:
+            return "[]"
+        return json.dumps(list_dictionaries)
+
+    @staticmethod
     def from_json_string(json_string):
         """to_json_string method"""
         if json_string in {None, ""}:
@@ -43,14 +54,3 @@ class Base():
         dummy.update(**dictionary)
 
         return dummy
-
-    @staticmethod
-    def to_json_string(list_dictionaries):
-        """toJSON_String
-
-        Args:
-            list_dictionaries: lists of dictionaries
-        """
-        if list_dictionaries is None or list_dictionaries == []:
-            return "[]"
-        return json.dumps(list_dictionaries)
