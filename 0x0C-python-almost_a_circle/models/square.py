@@ -5,6 +5,7 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """azeazeaeazea"""
+
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
 
@@ -12,7 +13,7 @@ class Square(Rectangle):
     def size(self):
         """azeazeaeazea"""
         return self.width
-    
+
     @size.setter
     def size(self, _):
         """azeazeaeazea"""
@@ -21,7 +22,7 @@ class Square(Rectangle):
 
         if _ <= 0:
             raise ValueError("width must be > 0")
-    
+
     def update(self, *args, **kwargs):
         """azeazeaeazea"""
         if len(args) > 0:
@@ -57,4 +58,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """azeazeaeazea"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(self.id,
+                                                 self.x, self.y, self.width)
