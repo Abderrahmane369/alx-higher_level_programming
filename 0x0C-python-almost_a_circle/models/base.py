@@ -69,7 +69,8 @@ class Base():
         Args:
             **dictionary: double pointer to a dictionary.
         """
-        dummy = cls(1, 2, 3, 4)
+        dummy = cls(1)
+        dummy = cls(1, 1) if cls.__name__ == 'Rectangle' else dummy
         dummy.update(**dictionary)
 
         return dummy
