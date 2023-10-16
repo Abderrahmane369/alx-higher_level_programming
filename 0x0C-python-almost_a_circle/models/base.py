@@ -7,7 +7,7 @@ class Base():
     """Base class"""
     __nb_objects = 0
 
-    def __init__(self, id=None) -> None:
+    def __init__(self, id=None):
         """Base class"""
         if id is not None:
             self.id = id
