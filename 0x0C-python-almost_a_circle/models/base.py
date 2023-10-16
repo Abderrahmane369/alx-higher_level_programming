@@ -1,14 +1,21 @@
 #!/usr/bin/python3
-"""JSON"""
+"""Base class"""
 import json
 
 
 class Base():
-    """Base class"""
+    """Base class (blueprint) for objrcts.
+    private class attribute: __nb_objects = 0.
+    """
+    
     __nb_objects = 0
 
-    def __init__(self, id=None):
-        """Base class"""
+    def __init__(self, id=None) -> None:
+        """initialize Base class.
+
+        Args:
+            id: to avoid duplicating the same object.
+        """
         if id is not None:
             self.id = id
         else:
@@ -28,14 +35,22 @@ class Base():
 
     @staticmethod
     def from_json_string(json_string):
-        """to_json_string method"""
+        """returns the list of the JSON string representation json_string.
+
+        Args:
+            json_string: string representing a list of dictionaries.
+        """
         if json_string in {None, ""}:
             return []
         return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Base class"""
+        """writes the JSON string representation of list_objs to a file.
+
+        Args:
+            list_objs: list of instances who inherits of Base class.
+        """
         with open('{}.json'.format(cls.__name__), 'w') as f:
             objs = []
             if list_objs is not None:
@@ -49,7 +64,11 @@ class Base():
 
     @classmethod
     def create(cls, **dictionary):
-        """Base class"""
+        """returns an instance with all attributes already set.
+
+        Args:
+            **dictionary: double pointer to a dictionary.
+        """
         dummy = cls(1, 2, 3, 4)
         dummy.update(**dictionary)
 
