@@ -25,7 +25,7 @@ class Base():
 
     @staticmethod
     def from_json_string(json_string):
-        """Base class"""
+        """to_json_string method"""
         if json_string in {None, ""}:
             return []
 
