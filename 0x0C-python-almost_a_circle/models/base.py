@@ -17,18 +17,18 @@ class Base():
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Base class"""
-        if list_dictionaries is None:
-            return "[]"
-
-        return json.dumps(list_dictionaries)
-
-    @staticmethod
-    def to_json_string(list_dictionaries):
         """to_json_string method"""
         if (not list_dictionaries or list_dictionaries is None):
             return "[]"
         return (json.dumps(list_dictionaries))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """to_json_string method"""
+        if json_string in {None, ""}:
+            return []
+
+        return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
