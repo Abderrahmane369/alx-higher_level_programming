@@ -17,10 +17,11 @@ class Base():
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """to_json_string method"""
-        if (not list_dictionaries or list_dictionaries is None):
+        """Base class"""
+        if list_dictionaries in {None, []}:
             return "[]"
-        return (json.dumps(list_dictionaries))
+
+        return json.dumps(list_dictionaries)
 
     @staticmethod
     def from_json_string(json_string):
