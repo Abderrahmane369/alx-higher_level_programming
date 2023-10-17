@@ -15,11 +15,9 @@ class TestsOFAllFiles(unittest.TestCase):
 
     def test_NoId(self):
         base = Base()
-        self.assertTrue(base.id is not None)
-        base = Base()
-        self.assertTrue(base.id is not None)
-        base = Base()
-        self.assertTrue(base.id is not None)
+        base1 = Base()
+        base2 = Base()
+        self.assertEqual(base.id, base2.id - 2)
 
     def test_ZeroId(self):
         base = Base(0)
