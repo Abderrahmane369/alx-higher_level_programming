@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Base class"""
 import json
+import csv
 
 
 class Base():
@@ -87,5 +88,48 @@ class Base():
                 ilist = [cls.create(**inst) for inst in listInstances]
 
                 return ilist
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """writes the CSV string representation of list_objs to a file.
+
+        Args:
+            list_objs: list of instances who inherits of Base class.
+        """
+        with open("{}.csv".format(cls.__name__), "w") as f:
+            objs = []
+
+            if list_objs is not None:
+                objs = list_objs
+
+            field = ["id", "width", "height", "x", "y"]
+
+            if cls.__name__ == 'Square':
+                field = ["id", "size", "x", "y"]
+
+            csv_WRITER = csv.DictWriter(f, fieldnames=field)
+
+            listDicts = [obj.to_dictionary() for obj in objs]
+
+            csv_WRITER.writeheader()
+            csv_WRITER.writerows(listDicts)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """writes the CSV string representation of list_objs to a file.
+
+        Args:
+
+        """
+        try:
+            with open("{}.csv".format(cls.__name__), "r") as f:
+                csv_READER = csv.DictReader(f, delimiter=',')
+
+                def intd(d): return {k: int(v) for k, v in d.items()}
+                listInst = [cls.create(**intd(d)) for d in csv_READER]
+
+                return listInst
         except FileNotFoundError:
             return []
