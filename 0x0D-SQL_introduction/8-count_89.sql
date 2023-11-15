@@ -1,0 +1,6 @@
+--NUMBER OF 89
+--COUNT SUBQUERY
+SELECT COUNT(*)
+FROM first_table
+WHERE id = 89
+
