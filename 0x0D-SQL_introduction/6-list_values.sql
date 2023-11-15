@@ -1,0 +1,4 @@
+-- FULL TABLE
+-- SELECT QUERY
+SELECT * FROM first_table
+
