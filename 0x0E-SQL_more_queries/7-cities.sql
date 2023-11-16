@@ -1,7 +1,7 @@
 -- TASK 7
 -- BEIGNS
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
-USE hbyn_0d_usa;
+USE hbtn_0d_usa;
 CREATE TABLE IF NOT EXISTS cities (
 				id INT UNIQUE AUTO_INCREMENT NOT NULL PRIMARY KEY,
 				state_iid INT NOT NULL,
