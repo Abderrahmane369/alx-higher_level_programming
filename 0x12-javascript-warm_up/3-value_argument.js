@@ -2,8 +2,8 @@
 
 const argv = process.argv;
 
-if (argv.at(2)) {
-  console.log(argv.at(-1));
+if (argv[2]) {
+  console.log(argv[2]);
 } else {
-  console.log('No arguments');
+  console.log('No argument');
 }
