@@ -2,6 +2,6 @@
 
 const langs = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 
-for (let lang of langs) {
+for (const lang of langs) {
   console.log(lang);
 }
