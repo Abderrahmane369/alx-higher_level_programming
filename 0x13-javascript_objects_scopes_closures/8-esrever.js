@@ -4,7 +4,7 @@ exports.esrever = function (list) {
   const arr = [];
 
   for (let i = 0; i < list.length; i++) {
-    arr.push(list.at(-i - 1));
+    arr.push(list[list.length - i - 1]);
   }
   return arr;
 };
