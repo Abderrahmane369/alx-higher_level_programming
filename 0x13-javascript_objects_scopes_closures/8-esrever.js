@@ -3,7 +3,9 @@
 exports.esrever = function (list) {
   const arr = [];
 
-  for (const _ in list) arr[_] = list.at(-_);
-
+  for (const i in list) {
+    arr[i] = list.at(-i - 1);
+    console.log(arr[i]);
+  }
   return arr;
 };
