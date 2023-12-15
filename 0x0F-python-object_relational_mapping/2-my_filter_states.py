@@ -24,7 +24,7 @@ def main():
 
     cursor.execute(
         "SELECT * FROM states WHERE name='{}'".format(sys.argv[4]) +
-        "ORDER BY id;")
+        "COLLATE utf8mb4_bin ORDER BY id;")
 
     for row in cursor.fetchall():
         print(row)
