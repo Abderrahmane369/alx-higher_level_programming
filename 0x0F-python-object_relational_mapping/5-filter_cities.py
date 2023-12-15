@@ -35,7 +35,6 @@ def main():
             print(", ", end="")
         else:
             print()
-            print()
 
     cursor.close()
     db.close()
