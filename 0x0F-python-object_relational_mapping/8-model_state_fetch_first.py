@@ -15,7 +15,7 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    objects = session.query(State).order_by(State.id).limit(1).first()
+    objects = session.query(State).order_by(State.id).limit(1).second()
 
     if object != []:
         print(str(1) + ': ' + objects.name)
