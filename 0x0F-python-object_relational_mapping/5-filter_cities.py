@@ -24,7 +24,7 @@ def main():
                    SELECT cities.id, cities.name, states.name
                    FROM cities
                    JOIN states ON  states.id = cities.state_id
-                   WHERE states.name = %s
+                   WHERE states.name = %s COLLATE utf8mb4_bin
                    ORDER BY cities.id;
                    """, (sys.argv[4] if len(sys.argv) == 5 else 'NULL',))
 
