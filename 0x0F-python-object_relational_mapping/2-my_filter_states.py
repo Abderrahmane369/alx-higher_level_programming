@@ -23,8 +23,8 @@ def main():
     cursor = db.cursor()
 
     cursor.execute(
-        """SELECT * FROM states WHERE name='{}'" +
-        "ORDER BY id;""".format(sys.argv[4]))
+        "SELECT * FROM states WHERE name='{}'".format(sys.argv[4]) +
+        "ORDER BY id;")
 
     for row in cursor.fetchall():
         print(row)
