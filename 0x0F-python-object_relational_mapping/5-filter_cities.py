@@ -31,7 +31,7 @@ def main():
     for i, row in enumerate(cursor.fetchall()):
         print(row[1], end="")
 
-        if i < 2:
+        if i < cursor.rowcount - 1:
             print(", ", end="")
         else:
             print()
