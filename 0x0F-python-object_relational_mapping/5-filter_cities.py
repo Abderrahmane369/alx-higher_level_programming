@@ -26,7 +26,7 @@ def main():
                    JOIN states ON  states.id = cities.state_id
                    WHERE states.name = %s COLLATE utf8mb4_bin
                    ORDER BY cities.id;
-                   """, (sys.argv[4] if len(sys.argv) == 5 else 'NULL',))
+                   """, (sys.argv[4] if len(sys.argv) == 5 else '',))
 
     for i, row in enumerate(cursor.fetchall()):
         print(row[1], end="")
