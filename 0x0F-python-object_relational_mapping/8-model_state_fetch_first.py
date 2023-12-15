@@ -18,7 +18,7 @@ def main():
     objects = session.query(State).order_by(State.id).all()
 
     if object != []:
-        print(str(1) + ': ' + object[0].name)
+        print(str(1) + ': ' + objects[0].name)
     else:
         print("Nothing")
 
