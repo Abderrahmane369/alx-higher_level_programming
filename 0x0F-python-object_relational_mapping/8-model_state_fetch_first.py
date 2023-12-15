@@ -15,10 +15,10 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    objects = session.query(State).order_by(State.id).all()
+    objects = session.query(State).order_by(State.id).limit(1).first()
 
     if object != []:
-        print(str(1) + ': ' + objects[0].name)
+        print(str(1) + ': ' + objects.name)
     else:
         print("Nothing")
 
