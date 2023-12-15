@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Connects to a MySQL database and retrieves the cities and their corresponding states.
+Connects to a MySQL
 Prits the results.
 """
 import sys
@@ -9,7 +9,6 @@ import MySQLdb
 
 def main():
     """
-    Connects to a MySQL database and retrieves the cities and their corresponding states.
     Prints the results.
     """
     db = MySQLdb.connect(

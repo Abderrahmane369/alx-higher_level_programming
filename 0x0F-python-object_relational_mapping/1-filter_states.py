@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This script connects to a MySQL database and retrieves states whose names start with 'N'.
+This script connects to a MySQL database and retrieve.
 It then prints the retrieved states.
 """
 import sys
@@ -9,7 +9,6 @@ import MySQLdb
 
 def main():
     """
-    Connects to a MySQL database and retrieves states whose names start with 'N'.
     Prints the retrieved states.
     """
 

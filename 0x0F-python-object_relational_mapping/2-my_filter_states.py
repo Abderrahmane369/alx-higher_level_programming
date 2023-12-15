@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module connects to a MySQL database and retrieves rows from the 'states' table
+This module connects to a MySQL database and retrieable
 based on a given name.
 """
 import sys
@@ -9,8 +9,7 @@ import MySQLdb
 
 def main():
     """
-    This function connects to a MySQL database and retrieves rows from the 'states' table
-    based on a given name. It takes command line arguments for the database credentials
+    This function connects to a MySQL database and rets
     and the name to filter by.
     """
 
@@ -24,7 +23,8 @@ def main():
     cursor = db.cursor()
 
     cursor.execute(
-        "SELECT * FROM states WHERE name='{}' ORDER BY id;".format(sys.argv[4]))
+        """SELECT * FROM states W
+        HERE name='{}' ORDER BY id;""".format(sys.argv[4]))
 
     for row in cursor.fetchall():
         print(row)

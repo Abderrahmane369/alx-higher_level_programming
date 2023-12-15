@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Connects to a MySQL database and retrieves cities based on a given state name.
-Prints the names of the cities, separated by commas, up to a maximum of 3 cities.
+Connects to a MySQL.
 """
 import sys
 import MySQLdb
@@ -9,8 +8,7 @@ import MySQLdb
 
 def main():
     """
-    Connects to a MySQL database and retrieves cities based on a given state name.
-    Prints the names of the cities, separated by commas, up to a maximum of 3 cities.
+    Connects to a MySQL database and retrieves
     """
 
     db = MySQLdb.connect(
