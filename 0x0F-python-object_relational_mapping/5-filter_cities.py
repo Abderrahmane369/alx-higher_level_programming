@@ -33,6 +33,8 @@ def main():
 
         if i < 2:
             print(", ", end="")
+        else:
+            print()
 
     cursor.close()
     db.close()
