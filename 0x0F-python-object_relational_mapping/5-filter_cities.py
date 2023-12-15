@@ -28,7 +28,16 @@ def main():
                    ORDER BY cities.id ASC;
                    """, (sys.argv[4] if len(sys.argv) == 5 else '',))
 
-    print()
+    for i, row in enumerate(cursor.fetchall()):
+        print(row[1], end="")
+
+        if i < cursor.rowcount - 1:
+            print(", ", end="")
+        else:
+            print()
+
+    if cursor.rowcount == 0:
+        print()
 
     cursor.close()
     db.close()
