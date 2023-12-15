@@ -22,7 +22,8 @@ def main():
     cursor = db.cursor()
 
     cursor.execute(
-        "SELECT * FROM states WHERE name LIKE 'N%' COLLATE utf8mb4_bin ORDER BY id;")
+        "SELECT * FROM states WHERE name LIKE"
+        + "'N%' COLLATE utf8mb4_bin ORDER BY id;")
 
     for row in cursor.fetchall():
         print(row)
