@@ -10,7 +10,7 @@ class State(Base):
     """LOOOOL"""
     __tablename__ = "states"
     id = Column(Integer, autoincrement=True,
-                primary_key=True, nullable=False, unique=True)
+                primary_key=True, nullable=False, unique=True, index=True)
     name = Column("name", String(128), nullable=False)
 
     def __init__(self, id, name):
