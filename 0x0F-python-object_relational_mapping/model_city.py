@@ -1,15 +1,14 @@
-#!/usr/bin/python3
-# model_state.py
-from sqlalchemy import Column, Integer, String
+# model_city.py
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
-from model_city import City
 
 Base = declarative_base()
 
 
-class State(Base):
-    """State class"""
-    __tablename__ = "states"
+class City(Base):
+    """City class"""
+    __tablename__ = "cities"
     id = Column(Integer, autoincrement=True,
                 primary_key=True, nullable=False, unique=True)
     name = Column("name", String(128), nullable=False)
+    state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
