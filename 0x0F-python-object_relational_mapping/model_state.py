@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# model_state.py
+"""azezeaezaee"""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from model_city import City
