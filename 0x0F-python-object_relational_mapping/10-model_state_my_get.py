@@ -17,7 +17,7 @@ def main():
 
     obj = session.query(State).filter(State.name == argv[4])
 
-    if obj[0]:
+    if obj.count() > 0:
         print(obj[0].id)
     else:
         print("Not found")
