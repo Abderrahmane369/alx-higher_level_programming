@@ -17,7 +17,7 @@ def main():
 
     objects = session.query(State).order_by(State.id).limit(1).first()
 
-    if objects != None:
+    if objects is not None:
         print(str(1) + ': ' + objects.name)
     else:
         print("Nothing")
