@@ -9,13 +9,14 @@ from model_state import Base, State
 def main():
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost/{}'.format(argv[1],
-                                                       argv[2], argv[3]),
+                                                    argv[2], argv[3]),
         pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    objects = session.query(State).order_by(State.id).filter(State.name.like("%a%"))
+    objects = session.query(State).order_by(
+        State.id).filter(State.name.like("%a%"))
 
     for i, obj in enumerate(objects):
         print(str(i + 1) + ': ' + obj.name)
