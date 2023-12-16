@@ -15,7 +15,8 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    updated = session.query(State).filter(State.name.like("%a%").collate('utf8mb4_bin')).first()
+    updated = session.query(State).filter(
+        State.name.like("%a%").collate('utf8mb4_bin')).first()
     session.delete(updated)
 
     session.commit()
