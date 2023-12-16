@@ -15,8 +15,9 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    objects = session.query(State).order_by(
-        State.id).filter(State.name.like("%a%").collate('utf8mb4_bin'))
+    objects = session.query(State).filter(
+        State.name.like("%a%").collate('utf8mb4_bin')).order_by(
+        State.id)
 
     for i, obj in enumerate(objects):
         print(str(i + 1) + ': ' + obj.name)
