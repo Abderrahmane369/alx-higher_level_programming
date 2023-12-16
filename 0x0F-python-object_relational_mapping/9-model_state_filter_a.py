@@ -19,8 +19,8 @@ def main():
         State.name.like("%a%").collate('utf8mb4_bin')).order_by(
         State.id)
 
-    for i, obj in enumerate(objects):
-        print(str(i + 1) + ': ' + obj.name)
+    for obj in objects:
+        print(str(obj.id) + ': ' + obj.name)
 
 
 if __name__ == '__main__':
