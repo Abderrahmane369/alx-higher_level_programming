@@ -1,3 +1,3 @@
 #!/bin/bash
 #aa
-curl -s '%{200}' "$1"
+curl -s '%{http_code}' "$1"
