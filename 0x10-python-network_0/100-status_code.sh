@@ -1,3 +1,3 @@
 #!/bin/bash
 #binobasha
-curl -s -w '%{http_code}' "$1" | awk '{print $1}'
+if response=$(curl -s -w "%{http_code}" "$1"); then echo $response; fi
