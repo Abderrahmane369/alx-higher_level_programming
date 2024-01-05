@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Ubunatu Misogashi"""
 
+
 def find_peak(list_of_integers):
     """_summary_
 
