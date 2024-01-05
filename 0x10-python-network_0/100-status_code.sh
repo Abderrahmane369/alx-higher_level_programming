@@ -1,3 +1,4 @@
 #!/bin/bash
 #binobasha
-if response=$(curl -s -w "%{http_code}" "$1"); then echo $response; fi
+curl -o /dev/null -s -w "%{http_code}\n" "$1"
+
