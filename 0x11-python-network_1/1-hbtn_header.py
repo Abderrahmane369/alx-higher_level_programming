@@ -4,6 +4,6 @@ import urllib.request as rqst
 import sys
 
 with rqst.urlopen(sys.argv[1]) as rsp:
-    con = rsp
+    con = dict(rsp.getheaders())
 
-print(dict(con.getheaders()).get("X-Request-Id"))
+print(con.get("X-Request-Id"))
