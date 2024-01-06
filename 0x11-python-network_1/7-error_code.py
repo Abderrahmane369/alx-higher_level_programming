@@ -8,3 +8,5 @@ if __name__ == "__main__":
 
     if rqst.status_code >= 400:
         print(f"Error code: {rqst.status_code}")
+    else:
+        print(rqst.content.decode())
