@@ -1,3 +1,3 @@
 #!/bin/bash
-#binobasha
-if response=$(curl -s -w "%{http_code}" "$1"); then echo $response; fi
+#loazeo
+curl -s -o /dev/null -w "%{http_code}" "$1"
