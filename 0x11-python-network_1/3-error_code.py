@@ -7,6 +7,6 @@ from sys import argv
 if __name__ == "__main__":
     try:
         with rqst.urlopen(argv[1]) as rsp:
-            print(rsp.read().decode())
+            print(rsp.read().decode("utf-8"))
     except HTTPError as err:
-        print(err)
+        print(f"Error: {err}")
