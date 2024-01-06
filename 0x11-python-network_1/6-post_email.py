@@ -8,4 +8,4 @@ if __name__ == "__main__":
         "email": argv[2]
     })
 
-    print(rqst.content)
+    print(rqst.content.decode())
