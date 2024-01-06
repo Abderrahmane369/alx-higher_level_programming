@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""AAALOISA"""
 import urllib.request as rqst
 import urllib.parse as parse
 from sys import argv
