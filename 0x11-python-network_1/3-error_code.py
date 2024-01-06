@@ -9,4 +9,4 @@ if __name__ == "__main__":
         with rqst.urlopen(argv[1]) as rsp:
             print(rsp.read().decode("utf-8"))
     except HTTPError as err:
-        print(f"Error code: {err}")
+        print(f"Error: {err}")
