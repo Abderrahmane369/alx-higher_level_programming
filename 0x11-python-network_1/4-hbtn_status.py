@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-"""ozeàofibog"""
+"""aezezaeazeae"""
 from requests import get
 
 if __name__ == "__main__":
-    r = get("https://alx-intranet.hbtn.io/status")
-
-    print(f"Body response:\n\t- type: {type(r.text)}\n\t- content: {r.text}")
+    url = 'https://intranet.hbtn.io/status'
+    response = get(url)
+    bytes_content = response.text
+    string = 'Body response:\n\t- type: {}\n\t- content: {}'.format(
+        type(bytes_content), bytes_content)
+    print(string)
