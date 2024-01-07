@@ -2,7 +2,6 @@
 """oooiiuuuiiooo"""
 import requests
 from sys import argv
-import json
 
 if __name__ == "__main__":
     rqst = requests.post("http://0.0.0.0:5000/search_user", data={
@@ -10,13 +9,13 @@ if __name__ == "__main__":
     })
 
     try:
-        if json.loads(rqst.content.decode()) == {}:
+        if rqst.content.json() == {}:
             print("No result")
 
         else:
             print("[{}] {}".format(
-                json.loads(rqst.content.decode()).get('id'),
-                json.loads(rqst.content.decode()).get('name')
+                rqst.content.json().get('id'),
+                rqst.content.json().get('name')
             ))
     except ValueError:
         print("Not a valid JSON")
