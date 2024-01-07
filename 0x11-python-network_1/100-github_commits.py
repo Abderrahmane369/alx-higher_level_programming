@@ -9,5 +9,5 @@ if __name__ == "__main__":
                       auth=(argv[1], argv[2]))
 
     for _ in rq.json()[:10]:
-        print(_.get("commit").get("tree").get("sha"), end=": ")
-        print(_.get("commit").get("author").get("name"), end="\n\n")
+        print(_.get("sha"), end=": ")
+        print(_.get("commit").get("author").get("name"))
