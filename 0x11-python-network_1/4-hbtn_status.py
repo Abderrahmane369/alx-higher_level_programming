@@ -3,8 +3,8 @@
 from requests import get
 
 if __name__ == "__main__":
-    response = get('https://intranet.hbtn.io/status')
+    url = 'https://intranet.hbtn.io/status'
+    response = get(url)
     bytes_content = response.text
-    string = 'Body response:\n\t- type: {}\n\t- content: {}'.format(
-        type(bytes_content), bytes_content)
+    string = f'Body response:\n\t- type: {type(bytes_content)}\n\t- content: {bytes_content}'
     print(string)
