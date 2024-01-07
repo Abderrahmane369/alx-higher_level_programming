@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """oooiiuuuiiooo"""
-import requests
+import requestssS
 from sys import argv
 
 if __name__ == "__main__":
