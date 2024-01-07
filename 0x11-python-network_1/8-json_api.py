@@ -9,13 +9,13 @@ if __name__ == "__main__":
     })
 
     try:
-        if rqst.content.json() == {}:
+        if rqst.json() == {}:
             print("No result")
 
         else:
             print("[{}] {}".format(
-                rqst.content.json().get('id'),
-                rqst.content.json().get('name')
+                rqst.json().get('id'),
+                rqst.json().get('name')
             ))
     except ValueError:
         print("Not a valid JSON")
