@@ -7,11 +7,12 @@ request(process.argv.splice(2)[0], (err, res, body) => {
   let data = JSON.parse(body);
   let userTasks = {};
 
-  data.forEach(task => {
-    if (task.completed && !userTasks[task.userId]) {
-      userTasks[task.userId] = 1;
-    } else if (task.completed) {
-      userTasks[task.userId]++;
+  data.forEach(element => {
+    if (element.completed) {
+      if (!userTasks[element.userId]) userTasks[element.userId] = 1;
+      else {
+        userTasks[element.userId]++;
+      }
     }
   });
 
