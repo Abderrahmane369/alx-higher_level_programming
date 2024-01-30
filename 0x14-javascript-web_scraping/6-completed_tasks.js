@@ -5,19 +5,15 @@ request(process.argv.splice(2)[0], (err, res, body) => {
   if (err) console.log(err);
 
   let data = JSON.parse(body);
-  data = data.filter(e => {
-    return e.completed;
+  let userTasks = {};
+
+  data.forEach(task => {
+    if (task.completed && !userTasks[task.userId]) {
+      userTasks[task.userId] = 1;
+    } else if (task.completed) {
+      userTasks[task.userId]++;
+    }
   });
 
-  const userTask = {};
-
-  for (let i = 1; i <= 10; i++) {
-    const tArrLen = data.filter(e => {
-      return e.userId === i;
-    }).length;
-
-    userTask[i.toString()] = tArrLen;
-  }
-
-  console.log(userTask);
+  console.log(userTasks);
 });
