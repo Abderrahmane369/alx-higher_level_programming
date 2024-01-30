@@ -4,8 +4,8 @@ const request = require('request');
 request(process.argv.splice(2)[0], (err, res, body) => {
   if (err) console.log(err);
 
-  let data = JSON.parse(body);
-  let userTasks = {};
+  const data = JSON.parse(body);
+  const userTasks = {};
 
   data.forEach(element => {
     if (element.completed) {
